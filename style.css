@@ -123,10 +123,8 @@ border:0px;
 }
 .media
 {
-margin:0 auto;
-display:inline-block;
-box-sizing: border-box;
-text-align: center;
+    margin: 50px auto;
+    text-align: center;
 }
 
 .chat
@@ -137,8 +135,6 @@ margin:0 50px;
 }
 #ytplayer
 {
-margin:0 auto;
-display:inline-block;
-box-sizing: border-box;
-text-align: center;
+    background-color: #ccc;
+    border-radius: 50px;
 }

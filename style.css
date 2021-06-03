@@ -1,0 +1,142 @@
+*
+{
+margin:0px ;
+padding:0px;
+}
+.menu li
+{
+float:left;
+list-style: none;
+margin:10px 25px ;
+    color: #510639
+}
+.blok-menu
+{
+overflow: hidden;
+background: #000000;
+box-shadow: 0px 13px 17px -6px #440128;
+  
+}
+.logotip {
+    float: left; /*Задаем обтекание*/   
+    margin:0 auto;
+   }
+.menu
+{
+margin:0 auto;
+display:table;
+position: relative;
+box-sizing: border-box;
+text-align: justify;
+}
+.menu li a
+{
+    display: inline-block;
+  position: relative;
+  color: #510639;
+  text-decoration: none;
+  padding: 0.2em 0.05em;
+  border-bottom: 0px solid rgb(97, 1, 46);
+font: 18px Verdana, Arial, Helvetica, sans-serif;
+display: block;
+margin: auto;
+text-decoration: none;
+color: #510639;
+position: relative;
+-webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+z-index: 1;
+}
+.menu li a::after
+{
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color:#510639;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    -webkit-transform-origin: bottom center;
+            transform-origin: bottom center;
+    z-index: -1;  
+}
+.menu li a:hover
+{
+font: 18px Verdana, Arial, Helvetica, sans-serif;
+color: #ffffff;
+}
+.menu li a:hover:after {
+    right: 0;
+    left: 0;
+    height: 100%;
+  }
+.logo
+{
+    margin: 50px auto;
+    width: auto;
+    text-align: center;
+    
+}
+.content
+{
+width:700px;
+margin:0 auto;
+padding:20px;
+box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;
+}
+ 
+.content h2
+{
+font: 30px Verdana, Arial, Helvetica, sans-serif;
+color:#444;
+text-align:center;
+}
+ 
+.content p
+{
+font: 14px Verdana, Arial, Helvetica, sans-serif;
+color:#444;
+text-indent:20px;
+}
+.footer
+{
+width:100%;
+text-align:center;
+margin-top:20px;
+}
+.footer p, .footer a
+{
+font: 14px Verdana, Arial, Helvetica, sans-serif;
+color:#444;
+}
+ 
+.footer a
+{
+text-decoration: none;
+border-bottom:1px dotted #444;
+}
+ 
+.footer a:hover
+{
+text-decoration: none;
+border:0px;
+}
+.media
+{
+    width: 900;
+margin:0 auto;
+display:table;
+position: relative;
+box-sizing: border-box;
+text-align: justify;
+}
+
+.chat
+{
+width: 300px;
+float: right;
+margin:0 50px;
+}

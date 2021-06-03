@@ -1,0 +1,12 @@
+{
+  "name": "kurs",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "redux": "^4.1.0",
+    "ws": "^7.4.5"
+  }
+}

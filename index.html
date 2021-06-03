@@ -1,5 +1,6 @@
 <html lang="ru">
 <head>
+    <script src=script.js></script>
     <title>Кинотеатр</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="/style.css">
@@ -9,6 +10,7 @@
         }
     </style>
 </head>
+    
 <body>
 <div class="blok-menu">
     <ul class="menu">
@@ -28,62 +30,7 @@
         <button id="startBtn">Start Video</button>
     </div>
 
-    <script>
-        var player;
-
-        function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
-                height: '360',
-                width: '640',
-                videoId: 'M7lc1UVf-VE',
-                events: {
-                    onReady: prepareSocket,
-                }
-            });
-        }
-
-        document.getElementById("startBtn").addEventListener("click", function () {
-            socket.send(JSON.stringify({
-                message: "start"
-            }));
-        });
-        document.getElementById("stopBtn").addEventListener("click", function () {
-            socket.send(JSON.stringify({
-               message: "stop"
-            }));
-        });
-        console.log(location.host);
-        const url = 'ws://localhost:8000';
-        // location.host == 'localhost' ?
-        //   'ws://localhost:8000' : location.host == 'javascript.local' ?
-        //   `ws://javascript.local/article/websocket/chat/ws` : // интеграция для разработки с локальным сайтом
-        //   `wss://javascript.info/article/websocket/chat/ws`; // боевая интеграция с javascript.info
-
-        let socket;
-
-        function prepareSocket() {
-            function openSokcet() {
-                socket = new WebSocket(url);
-            }
-            openSokcet();
-
-            socket.onopen = function () {
-                console.log("open socket");
-            };
-            socket.onmessage = function (event) {
-                let incomingMessage = JSON.parse(event.data);
-                switch (incomingMessage.message) {
-                    case 'start':
-                        player.playVideo();
-                        break;
-                    case 'stop':
-                        player.stopVideo();
-                        break;
-                }
-            };
-        }
-    </script>
-    <script src="https://www.youtube.com/player_api"></script>
 </div>
+    <script src="https://www.youtube.com/player_api"></script>
 </body>
 </html>
